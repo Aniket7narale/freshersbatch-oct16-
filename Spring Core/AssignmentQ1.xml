@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd" >
+    
+<!--   creating beans using setter injections-->
+<!--    creating bean for address    -->
+	<bean id="Address" class="AssignmentQ1.Address">  
+		<property name="street" value="Street No.1"/>  
+		<property name="city" value="Narale"/>  
+		<property name="state" value="Maharashtra"/> 
+		<property name="zip" value="440027"/> 
+		<property name="country" value="India"/>  
+	</bean>  
+	
+<!--    creating bean for customer-->	  
+	<bean id = "Customer" class= "AssignmentQ1.Customer">  
+		<property name="customerId" value="101"/>  
+		<property name="customerName" value="Aniket Narale"/>
+		<property name="customerContact" value="1234567890"/>  
+		<property name="CustomerAddress" ref="Address"/>  
+	</bean>
+
+<!--    creating beans using constructor injections-->
+<!--    creating bean for address-->
+    <bean id="Address1" class="AssignmentQ1.Address" autowire="byName">
+        <constructor-arg name="street" value="Street No. 4"/>
+        <constructor-arg name="city" value="Nagpur"/>
+        <constructor-arg name="state" value="Maharashtra"/>
+        <constructor-arg name="zip" value="440026"/>
+        <constructor-arg name="country" value="India"/>
+    </bean>
+
+<!--    creating bean for customer-->
+    <bean id="Customer1" class="AssignmentQ1.Customer" autowire="byName">
+        <constructor-arg name="customerId" value="102"/>
+        <constructor-arg name="customerName" value="Tejas Gautam"/>
+        <constructor-arg name="customerContact" value="0987654321"/>
+        <constructor-arg name="CustomerAddress" ref="Address1"/>
+    </bean>
+
+
+<context:annotation-config />
+<context:component-scan base-package="controller" />
+        
+</beans>    
