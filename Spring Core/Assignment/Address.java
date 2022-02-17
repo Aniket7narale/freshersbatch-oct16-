@@ -1,4 +1,4 @@
-package com.capgemini.springAssignment.Q1;
+package com.springcore;
 
 public class Address {
     private String street;
