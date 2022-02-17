@@ -15,14 +15,14 @@
 
 
                                        <!--      Using setter injection -->
-      <bean id="customer" class="com.capgemini.springAssignment.Q1.Customer">
+      <bean id="customer" class="com.springcore.Customer">
           <property name="customerId" value="001"/>
           <property name="customerName" value="Aniket"/>
           <property name="customerContact" value="1234567890"/>
           <property name="customerAddress" ref="custAddress"/>
 
       </bean>
-      <bean id="custAddress" class="com.capgemini.springAssignment.Q1.Address">
+      <bean id="custAddress" class="com.springcore.Address">
           <property name="street" value="xyz"/>
           <property name="city" value="NAgpur"/>
           <property name="state" value="Maharashtra"/>
@@ -39,7 +39,7 @@
         <constructor-arg value="0987654321"/>
         <constructor-arg ref="custAddressCon"/>
     </bean>
-    <bean id="custAddressCon" class="com.capgemini.springAssignment.Q1.Address">
+    <bean id="custAddressCon" class="com.springcore.Address">
         <constructor-arg value="World"/>
         <constructor-arg value="Welcome"/>
         <constructor-arg value="Nagpur"/>
