@@ -16,33 +16,33 @@
 
                                        <!--      Using setter injection -->
       <bean id="customer" class="com.capgemini.springAssignment.Q1.Customer">
-          <property name="customerId" value="555"/>
-          <property name="customerName" value="Vivek"/>
-          <property name="customerContact" value="6554541556"/>
+          <property name="customerId" value="001"/>
+          <property name="customerName" value="Aniket"/>
+          <property name="customerContact" value="1234567890"/>
           <property name="customerAddress" ref="custAddress"/>
 
       </bean>
       <bean id="custAddress" class="com.capgemini.springAssignment.Q1.Address">
-          <property name="street" value="hola"/>
-          <property name="city" value="guntur"/>
-          <property name="state" value="Andhra"/>
+          <property name="street" value="xyz"/>
+          <property name="city" value="NAgpur"/>
+          <property name="state" value="Maharashtra"/>
           <property  name="country" value="India"/>
-          <property name="zip" value="522403" />
+          <property name="zip" value="440027" />
       </bean>
 
 
 
                                 <!-- Using constructor injection -->
-    <bean id="customerCon" class = "com.capgemini.springAssignment.Q1.Customer">
-        <constructor-arg  type ="int" value="654"/>
-        <constructor-arg value="Virat"/>
-        <constructor-arg value="6548484"/>
+    <bean id="customerCon" class = "com.springcore.springAssignment.Q1.Customer">
+        <constructor-arg  type ="int" value="002"/>
+        <constructor-arg value="tejas"/>
+        <constructor-arg value="0987654321"/>
         <constructor-arg ref="custAddressCon"/>
     </bean>
     <bean id="custAddressCon" class="com.capgemini.springAssignment.Q1.Address">
         <constructor-arg value="World"/>
         <constructor-arg value="Welcome"/>
-        <constructor-arg value="Punjab"/>
+        <constructor-arg value="Nagpur"/>
         <constructor-arg value="India"/>
         <constructor-arg value="12356" />
     </bean>
