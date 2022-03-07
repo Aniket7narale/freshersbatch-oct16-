@@ -1,0 +1,12 @@
+table,tr, td{
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th{
+    border: 1px solid;
+    border-collapse: collapse;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+}
