@@ -1,0 +1,9 @@
+Used MongoDB for the assignments
+
+//For Assignment Q8
+Refer Product related Class files
+For CURD Operations 
+
+//For Assignment Q9
+Refer Customer related Class files
+For CURD Operations
